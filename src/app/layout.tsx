@@ -13,8 +13,8 @@ export const metadata: Metadata = {
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang='en' cz-shortcut-listen='true'>
-      <body className={noto.className}>
+    <html lang='en'>
+      <body className={noto.className} cz-shortcut-listen='true'>
         <StyledComponentsRegistry>
           <RootProvider>
             <RootLayout>{children}</RootLayout>

@@ -1,6 +1,12 @@
 import { createGlobalStyle } from 'styled-components';
+import { colorPalette } from './colors';
 
 export const GlobalStyle = createGlobalStyle`
+:root {
+    ${colorPalette}
+}
+
+
 *:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
     all: unset;
     display: revert;
