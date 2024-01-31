@@ -3,14 +3,23 @@ import { breakpoints, paddings } from '@/styles/size';
 import Link from 'next/link';
 import styled, { keyframes } from 'styled-components';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
+import addIcon from '@/assets/add.png';
 
 const BottomNav = () => {
   return (
     <Container>
       <Inner>
         <motion.button whileTap={{ scale: 0.95 }}>
-          <PostButton href='/'>
-            <IconX />
+          <PostButton href='/post' aria-label='일기 쓰기로 이동'>
+            <Image
+              priority
+              aria-hidden
+              src={addIcon}
+              alt='일기 쓰기로 이동'
+              width={30}
+              height={30}
+            />
           </PostButton>
         </motion.button>
       </Inner>
